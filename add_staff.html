@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add to staff</title>
+    <style type="text/css">
+      body {
+        background: aqua;
+      }
+      text {
+        font-size: large;
+        font-family: 'Verdana';
+      }
+      form {
+        font-size: large;
+        font-family: 'Verdana';
+      }
+      select{
+        font-size: large;
+        font-family: 'Verdana';
+      }
+      input{
+        font-size: large;
+        font-family: 'Verdana';
+      }
+    </style>
+</head>
+<body>
+<h2 style="font-family: Verdana">Добавление сотрудника в базу данных</h2>
+<form action="add.py" name="add_form" method="POST" enctype="multipart/form-data" target="staff_form.html">
+  <div>
+  <b><u>Подразделение</u></b> <br>
+  Выберите подразделение: <br>
+  <select name="division" autofocus required>
+    <option value="n1" selected>КНИЛ-1</option>
+    <option value="n2">КНИЛ-2</option>
+    <option value="n3">НИС-3</option>
+    <option value="n6">НИЛ-6</option>
+    <option value="n7">НИС-7</option>
+    <option value="spno">СПНО</option>
+  </select>
+  <br><br>
+
+  <b><u>ФИО</u></b> <br>
+  Фамилия: <br>
+  <input type="text" name="surname" size="20" required placeholder="Шевченко"><br>
+    Имя: <br>
+  <input type="text" name="name" size="20" required placeholder="Тарас"><br>
+    Отчество: <br>
+  <input type="text" name="second_name" size="20" required placeholder="Григорьевич"><br>
+   <br>
+
+  <b><u>Табельный номер</u></b> <br>
+  Введите номер: <br>
+  <input type="text" name="tabel" size="20" required placeholder="600 - 800" minlength="3" maxlength="3">
+  <br><br>
+  <b><u>Профессия</u></b> <br>
+  Выберите профессию: <br>
+  <select name="prof" autofocus required>
+    <option value="lab_boss" selected>Началик лаборатории</option>
+    <option value="sector_boss">Начальник сектора</option>
+    <option value="pro_eng_i">Ведущий инженер-исследователь</option>
+    <option value="eng_i1">Инженер-исследователь I категории</option>
+    <option value="eng_i2">Инженер-исследователь II категории</option>
+    <option value="eng_i">Инженер-исследователь без категории</option>
+    <option value="pro_eng_k">Ведущий инженер-конструктор</option>
+    <option value="eng_k1">Инженер-конструктор I категории</option>
+    <option value="eng_k2">Инженер-конструктор II категории</option>
+    <option value="eng_k">Инженер-конструктор без категории</option>
+    <option value="pro_eng_el">Ведущий инженер-электроник</option>
+    <option value="eng_el1">Инженер-электроник I категории</option>
+    <option value="eng_el2">Инженер-электроник II категории</option>
+    <option value="eng_el">Инженер-электроник без категории</option>
+    <option value="sles">Слесарь-испытатель</option>
+    <option value="isput">Испытатель-механик двигателей</option>
+  </select>
+  <br><br>
+
+   <b><u>Номер рабочего места</u></b> <br>
+  Введите номер: <br>
+  <input type="text" name="work_place" size="20" required placeholder="0001 - 0900"
+         minlength="4" maxlength="4">
+  <br><br>
+
+     <b><u>Оклад</u></b> <br>
+  Введите сумму оклада: <br>
+  <input type="text" name="work_place" size="20" required placeholder="9000 - 25000"
+         minlength="4" maxlength="5">
+  <br><br>
+
+  <b><u>Телефон</u></b> <br>
+  Ввидете номер в формате: <br>
+  <input type="tel" name="phone" size="20" placeholder="+38 (000) 000-00-00"
+         required pattern="\+38 \([0-9]{3}\) [0-9]{3}-[0-9]{2}-[0-9]{2}">
+  <br>
+  <br>
+
+
+  <b><u>Адресс</u></b> <br>
+  Введите адрес в формате: <br>
+  <input type="text" name="adress" size="35" required
+         placeholder="просп(ул., переулок) Мира 4(4А) кв.(дом) 52"><br>
+  <br>
+
+  <input type="reset" name="Очистить">
+  <input type="submit" name="Отправить">
+
+</div>
+</form>
+</body>
+
