@@ -1,0 +1,26 @@
+@charset "UTF-8";
+body {
+        background: aqua;
+      }
+text {
+        font-size: large;
+        font-family: 'Verdana';
+      }
+form {
+        font-size: large;
+        font-family: 'Verdana';
+      }
+select{
+        font-size: large;
+        font-family: 'Verdana';
+      }
+input{
+        font-size: large;
+        font-family: 'Verdana';
+      }
+input:invalid {
+        color: red;
+}
+input[name=tabel]:invalid{
+    color: blue;
+}
